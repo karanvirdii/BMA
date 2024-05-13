@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/main_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.plcoding.bma.ui.home.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_infoFragment"
+            app:destination="@id/infoFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_noteDetailFragment"
+            app:destination="@id/noteDetailFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_addFolderFragment"
+            app:destination="@+id/addFolderFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.plcoding.bma.ui.favorites.FavoritesFragment"
+        android:label="FavoritesFragment" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.plcoding.bma.ui.history.HistoryFragment"
+        android:label="HistoryFragment" />
+
+    <fragment
+        android:id="@+id/addNoteFragment"
+        android:name="com.plcoding.bma.ui.addnote.AddNoteFragment"
+        android:label="AddNoteFragment" >
+        <argument
+            android:name="folder"
+            app:argType="com.plcoding.bma.data.models.Folder" />
+        <argument
+            android:name="note"
+            app:argType="com.plcoding.bma.data.models.Note"
+            app:nullable="true" />
+        <argument
+            android:name="isFromIntent"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addFolderFragment"
+        android:name="com.plcoding.bma.ui.addfolder.AddFolderFragment"
+        android:label="AddFolderFragment" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.plcoding.bma.ui.info.InfoFragment"
+        android:label="InfoFragment" />
+    <fragment
+        android:id="@+id/noteDetailFragment"
+        android:name="com.plcoding.bma.ui.notedetail.NoteDetailFragment"
+        android:label="NoteDetailFragment" >
+        <action
+            android:id="@+id/action_noteDetailFragment_to_addNoteFragment"
+            app:destination="@id/addNoteFragment" />
+        <argument
+            android:name="folder"
+            app:argType="com.plcoding.bma.data.models.Folder" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.plcoding.bma.ui.settings.SettingsFragment"
+        android:label="SettingsFragment" />
+
+    <action android:id="@+id/globalActionToAddNoteFragment"
+        app:destination="@id/addNoteFragment" />
+</navigation>

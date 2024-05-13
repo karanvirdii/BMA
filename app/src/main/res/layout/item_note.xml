@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="8dp"
+    android:clickable="true"
+    android:elevation="3dp"
+    android:focusable="true"
+    android:layout_marginHorizontal="2dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivLinkPreview"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivNoteFolder"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toEndOf="@+id/ivLinkPreview"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/ic_facebook" />
+
+        <TextView
+            android:id="@+id/tvNoteFolder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toEndOf="@+id/ivNoteFolder"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Facebook" />
+
+        <TextView
+            android:id="@+id/tvNoteTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivLinkPreview"
+            app:layout_constraintTop_toBottomOf="@+id/tvNoteFolder"
+            tools:text="Facebook Link" />
+
+        <TextView
+            android:id="@+id/tvNoteDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/tvNoteTitle"
+            tools:text="This is a description for this Facebook Link" />
+
+        <ImageView
+            android:id="@+id/ivFavorite"
+            android:layout_width="@dimen/note_item_icon_size"
+            android:layout_height="@dimen/note_item_icon_size"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/tvNoteDescription"
+            app:srcCompat="@drawable/ic_baseline_favorite_border_36" />
+
+        <ImageView
+            android:id="@+id/ivEdit"
+            android:layout_width="@dimen/note_item_icon_size"
+            android:layout_height="@dimen/note_item_icon_size"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivFavorite"
+            app:layout_constraintTop_toBottomOf="@+id/tvNoteDescription"
+            app:srcCompat="@drawable/ic_edit" />
+
+        <ImageView
+            android:id="@+id/ivShare"
+            android:layout_width="@dimen/note_item_icon_size"
+            android:layout_height="@dimen/note_item_icon_size"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivEdit"
+            app:layout_constraintTop_toBottomOf="@+id/tvNoteDescription"
+            app:srcCompat="@drawable/ic_baseline_share_36" />
+
+        <ImageView
+            android:id="@+id/ivDelete"
+            android:layout_width="@dimen/note_item_icon_size"
+            android:layout_height="@dimen/note_item_icon_size"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivShare"
+            app:layout_constraintTop_toBottomOf="@+id/tvNoteDescription"
+            app:srcCompat="@drawable/ic_baseline_delete_36" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.25" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

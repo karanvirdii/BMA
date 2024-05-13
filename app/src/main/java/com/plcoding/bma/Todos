@@ -1,0 +1,1 @@
+Turn mutable state flow in basenotedetailviewmodel to return all notes from dao to get the notes in order to try something else otherwise

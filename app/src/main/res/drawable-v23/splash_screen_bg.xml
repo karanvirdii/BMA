@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/bma_colourful_splashscreen" />
+
+    <item
+        android:drawable="@drawable/bma_colourful_splashscreen"
+        android:gravity="center" />
+
+</layer-list>

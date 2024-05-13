@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:key="category_appearance"
+        android:title="@string/appearance"
+        app:icon="@drawable/ic_baseline_appearance_24">
+        <ListPreference
+            android:key="app_theme"
+            android:title="@string/app_theme"
+            android:defaultValue="0"
+            app:entries="@array/app_theme_preferences"
+            app:entryValues="@array/app_theme_preferences_data"
+            app:iconSpaceReserved="false"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="category_other"
+        android:title="@string/other"
+        app:icon="@drawable/ic_baseline_settings_24">
+        <Preference
+            android:key="ad_removal"
+            android:title="@string/remove_ads"
+            app:iconSpaceReserved="false"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="category_version"
+        android:title="@string/version"
+        android:icon="@drawable/ic_baseline_build_24">
+        <Preference
+            android:key="app_version"
+            android:title="Version 1"
+            app:iconSpaceReserved="false"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>
